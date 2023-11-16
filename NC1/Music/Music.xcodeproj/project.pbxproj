@@ -11,6 +11,8 @@
 		E7567E4C2B04C577001CA2FF /* StuffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7567E4B2B04C577001CA2FF /* StuffViewModel.swift */; };
 		E7567E4E2B04C5C9001CA2FF /* Stuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7567E4D2B04C5C9001CA2FF /* Stuff.swift */; };
 		E7567E502B04C6DD001CA2FF /* OthersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7567E4F2B04C6DD001CA2FF /* OthersView.swift */; };
+		E7B6F5A22B0685E900E40FF9 /* RecentlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6F5A12B0685E900E40FF9 /* RecentlyView.swift */; };
+		E7B6F5A42B0695EA00E40FF9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6F5A32B0695EA00E40FF9 /* ListView.swift */; };
 		E7DD16402B037F5D00D5B6A8 /* MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD163F2B037F5D00D5B6A8 /* MusicApp.swift */; };
 		E7DD16422B037F5D00D5B6A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD16412B037F5D00D5B6A8 /* ContentView.swift */; };
 		E7DD16442B037F5F00D5B6A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DD16432B037F5F00D5B6A8 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		E7567E4B2B04C577001CA2FF /* StuffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffViewModel.swift; sourceTree = "<group>"; };
 		E7567E4D2B04C5C9001CA2FF /* Stuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stuff.swift; sourceTree = "<group>"; };
 		E7567E4F2B04C6DD001CA2FF /* OthersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersView.swift; sourceTree = "<group>"; };
+		E7B6F5A12B0685E900E40FF9 /* RecentlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyView.swift; sourceTree = "<group>"; };
+		E7B6F5A32B0695EA00E40FF9 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E7DD163C2B037F5D00D5B6A8 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DD163F2B037F5D00D5B6A8 /* MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicApp.swift; sourceTree = "<group>"; };
 		E7DD16412B037F5D00D5B6A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				E7DD16542B0382F700D5B6A8 /* MusicView.swift */,
 				E7567E4F2B04C6DD001CA2FF /* OthersView.swift */,
 				E72D83372B0617C300F19508 /* SongView.swift */,
+				E7B6F5A12B0685E900E40FF9 /* RecentlyView.swift */,
+				E7B6F5A32B0695EA00E40FF9 /* ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,10 +190,12 @@
 			files = (
 				E72D83382B0617C300F19508 /* SongView.swift in Sources */,
 				E7DD164F2B037FB000D5B6A8 /* Song.swift in Sources */,
+				E7B6F5A42B0695EA00E40FF9 /* ListView.swift in Sources */,
 				E7DD16522B0380C700D5B6A8 /* SongViewModel.swift in Sources */,
 				E7DD16422B037F5D00D5B6A8 /* ContentView.swift in Sources */,
 				E7567E502B04C6DD001CA2FF /* OthersView.swift in Sources */,
 				E7DD16402B037F5D00D5B6A8 /* MusicApp.swift in Sources */,
+				E7B6F5A22B0685E900E40FF9 /* RecentlyView.swift in Sources */,
 				E7DD16552B0382F700D5B6A8 /* MusicView.swift in Sources */,
 				E7567E4E2B04C5C9001CA2FF /* Stuff.swift in Sources */,
 				E7567E4C2B04C577001CA2FF /* StuffViewModel.swift in Sources */,

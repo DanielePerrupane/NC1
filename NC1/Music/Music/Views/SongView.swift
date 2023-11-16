@@ -15,12 +15,12 @@ struct SongView: View {
             
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: 190, height: 195)
+                .frame(width: 180, height: 195)
                 .background(
                     Image(song.imageName)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 190, height: 195)
+                        .frame(width: 180, height: 195)
                         .clipped()
                         
                 ).cornerRadius(5).shadow(radius: 5)

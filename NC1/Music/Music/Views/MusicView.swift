@@ -8,62 +8,71 @@
 import SwiftUI
 
 struct MusicView: View {
-    
+    //Per rendere il Text visibile anche in dark mode
+    @Environment(\.colorScheme) var colorScheme
     var viewModel = StuffViewModel()
     var songModel = SongViewModel()
     var body: some View {
         
         TabView{
-            NavigationStack {
-                
-                
-                VStack {
-                    List {
-                        Text("Library")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.black)
-        
-                        ForEach(viewModel.stuffs) { stuff in
-                            NavigationLink{
-                                OthersView(stuff: stuff)
+            
+            NavigationView {
+                ScrollView {
+                    //Divider del Title
+                    Divider()
+                        .padding(.horizontal)
+                    
+                    
+                    //Sostituire con ListView
+                    ForEach(viewModel.stuffs) { stuff in
+                        
+                        NavigationLink{
+                            OthersView(stuff: stuff)
+                            
+                            
+                            
+                        } label : {
+                            
+                            Text(stuff.name)
+                                .font(.system(size: 20.0))
+                                .foregroundColor(Color(red: 0.808, green: 0.172, blue: 0.333))
                                 
-                            } label : {
-                                Text(stuff.name)
-                                    .font(.system(size: 20.0))
+                                
+                        }
+                        //Divider x ogni stuffs
+                        Divider()
+                            .padding(.horizontal)
+                        
+                        
+                    }
+                    //Fine parte sostituita
+                    
+                    
+                    
+                    //Divisione tra Recently e ListView
+                    Spacer(minLength: 45)
+                    ZStack {
+                        Text("Recently Added")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        //Per rendere il Text visibile anche in dark mode
+                            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                            .position(x:118.0,y:18.0)
+                    }
+                    //Metodo che richiama i Recently Added già impostati
+                    RecentlyView()
+                        .padding(.top,10.0)
+                }
+                .scrollContentBackground(.hidden)
+                .toolbar{
+                    ToolbarItemGroup(placement:
+                            .topBarTrailing) {
+                                EditButton()
                                     .foregroundColor(Color(red: 0.808, green: 0.172, blue: 0.333))
                             }
-                        }
-                        ZStack {
-                            Text("Recently Added")
-                                .font(.custom("SF UI Display", size: 25.0))
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.black)
-                        }
-                        .listRowInsets(.init(top: 50, leading: 20, bottom: 20, trailing: 0))
-                        
-                        HStack {
-                            ForEach(songModel.songs.chunked(into: 2), id: \.self) { songGroup in
-                                HStack {
-                                    ForEach(songGroup, id: \.id) { song in
-                                        NavigationLink(destination: SongView(song: song)){
-                                            // Contenuto della singola canzone all'interno della NavigationLink
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .scrollContentBackground(.hidden)
-                    .toolbar{
-                        ToolbarItemGroup(placement:
-                                .topBarTrailing) {
-                                    EditButton()
-                                        .foregroundColor(Color(red: 0.808, green: 0.172, blue: 0.333))
-                                }
                 }
-                }
-                //.navigationTitle("Library")
+                .navigationTitle("Library")
+                Divider()
                 
                 
                 
@@ -78,13 +87,6 @@ struct MusicView: View {
     }
 }
 
-extension Array {
-    func chunked(into size: Int) -> [[Element]] {
-        return stride(from: 0, to: count, by: size).map {
-            Array(self[$0 ..< Swift.min($0 + size, count)])
-        }
-    }
-}
 
 #Preview {
     MusicView()

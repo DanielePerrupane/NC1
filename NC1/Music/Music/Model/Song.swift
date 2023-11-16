@@ -8,15 +8,13 @@
 import Foundation
 
 
-struct Song: Identifiable, Hashable {
+struct Song: Identifiable {
+    
     var id : UUID = UUID()
     
     var imageName : String
     var title : String
     var artist : String
     
-    func hash(into hasher: inout Hasher) {
-            hasher.combine(id)
-            // Aggiungi altri attributi se necessario
-        }
+    
 }
