@@ -23,9 +23,7 @@ struct MusicView: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
-                        
-                        
-                        
+        
                         ForEach(viewModel.stuffs) { stuff in
                             NavigationLink{
                                 OthersView(stuff: stuff)
