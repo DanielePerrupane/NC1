@@ -13,69 +13,52 @@ struct RecentlyView: View {
     
     var body: some View {
         
-            Text("Recently Added")
-                .font(.title)
-                .fontWeight(.semibold)
-            //Per rendere il Text visibile anche in dark mode
-                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                .position(x:118.0,y:18.0)
+        Text("Recently Added")
+            .font(.title)
+            .fontWeight(.semibold)
+        //Per rendere il Text visibile anche in dark mode
+            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+            .position(x:118.0,y:18.0)
         
         HStack {
             
             ForEach(songModel.songs) { song in
-                        
-                        NavigationLink{
+                
+                NavigationLink{
+                    
+                    SongView(song: song)
+                    
+                } label : {
+                    
+                    HStack{
+                        VStack{
                             
-                            SongView(song: song)
-                            
-                        } label : {
-                            //Rectangle()
-                                //.foregroundColor(.clear)
-                                //.frame(width: 180, height: 195)
-                                //.background(
-                                    
-                                //).cornerRadius(5).shadow(radius: 5)
-                            HStack{
-                                VStack{
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .frame(width: 180, height: 195)
+                                .background(
                                     Image(song.imageName)
-                                    //.resizable()
-                                    //.aspectRatio(contentMode: .fill)
-                                    //.frame(width: 180, height: 195)
-                                    //.clipped()
-                                        .cornerRadius(5).shadow(radius: 5)
-                                    Text(song.title)
-                                        .padding(.trailing, 55.0)
-                                        .foregroundStyle(.black)
-                                    Text(song.artist)
-                                        .foregroundStyle(.gray)
-                                        .padding(.trailing, 90.0)
-                                }
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 180, height: 195)
+                                        .clipped()
+                                        
+                                ).cornerRadius(5).shadow(radius: 5)
+                            VStack{
+                                Text(song.title)
+                                    .padding(.trailing, 55.0)
+                                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                                Text(song.artist)
+                                    .foregroundStyle(.gray)
+                                    .padding(.trailing, 90.0)
                             }
-                                
+                            
                         }
-                        //Divider x ogni stuffs
-            //            Divider()
-            //                .padding(.horizontal)
-                        
-                        
+                    }
+                    .frame(width: 185, height: 190)
+                }
             }
         }
-         
-        
-        
-        
-        
-        
-//        ForEach(0..<songModel.songs.count-1, id: \.self){
-//            index in
-//            
-//            
-//                HStack{
-//                    SongView(song: Song(imageName: "Right My Wrongs", title: "Right My Wrongs", artist: "Bryson Tiller"))
-//                    SongView(song: Song(imageName: "The Color Violet", title: "The Color Violet", artist: "Tony Linez"))
-//                }
-//            
-//        }
     }
 }
 
