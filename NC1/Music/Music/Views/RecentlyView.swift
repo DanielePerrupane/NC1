@@ -18,7 +18,7 @@ struct RecentlyView: View {
             .fontWeight(.semibold)
         //Per rendere il Text visibile anche in dark mode
             .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-            .position(x:110.0)
+            .position(x:120.0)
             .padding(.bottom,20.0)
         
         HStack {
@@ -32,7 +32,7 @@ struct RecentlyView: View {
                 } label : {
                     
                     HStack{
-                        VStack{
+                        VStack(alignment: .leading){
                             
                             Rectangle()
                                 .foregroundColor(.clear)
@@ -45,7 +45,7 @@ struct RecentlyView: View {
                                         .clipped()
                                     
                                 ).cornerRadius(5).shadow(radius: 5)
-                            VStack{
+                            VStack(alignment: .leading){
                                 Text(song.title)
                                     .padding(.trailing, 55.0)
                                     .foregroundColor(colorScheme == .dark ? Color.white : Color.black)

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SongView: View {
     var song : Song
+    @Environment(\.colorScheme) var colorScheme
+    
     
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
             
             Rectangle()
                 .foregroundColor(.clear)
@@ -24,15 +26,22 @@ struct SongView: View {
                         .clipped()
                         
                 ).cornerRadius(5).shadow(radius: 5)
-            VStack{
+            VStack(alignment: .leading){
                 Text(song.title)
-                    .padding(.trailing, 55.0)
+                    //.padding(.trailing, 55.0)
+                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                    
                 Text(song.artist)
+                    .lineLimit(nil)
                     .foregroundStyle(.gray)
-                    .padding(.trailing, 90.0)
+                    
+                    //.padding(.left)
+                    //.padding(.trailing, 90.0)
             }
-            
+//            .frame(width: 180)
+
         }
+//        .frame(width: 180)
     }
 }
 
