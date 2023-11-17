@@ -50,15 +50,8 @@ struct MusicView: View {
                     
                     
                     //Divisione tra Recently e ListView
-                    Spacer(minLength: 45)
-                    ZStack {
-                        Text("Recently Added")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                        //Per rendere il Text visibile anche in dark mode
-                            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                            .position(x:118.0,y:18.0)
-                    }
+                    Spacer(minLength: 30)
+                    
                     //Metodo che richiama i Recently Added già impostati
                     RecentlyView()
                         .padding(.top,10.0)
