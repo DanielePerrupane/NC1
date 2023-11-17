@@ -13,6 +13,7 @@ struct Stuff : Identifiable {
     var id : UUID = UUID()
     
     var name : String 
+    var icon : String 
     
     
 }

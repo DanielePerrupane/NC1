@@ -12,64 +12,72 @@ struct MusicView: View {
     @Environment(\.colorScheme) var colorScheme
     var viewModel = StuffViewModel()
     var songModel = SongViewModel()
+    
     var body: some View {
         
         TabView{
             
             NavigationView {
-                ScrollView {
-                    //Divider del Title
-                    Divider()
-                        .padding(.horizontal)
-                    
+                VStack {
                     
                     //Sostituire con ListView
-                    ForEach(viewModel.stuffs) { stuff in
-                        
-                        NavigationLink{
-                            OthersView(stuff: stuff)
-                            
-                            
-                            
-                        } label : {
-                            
-                            Text(stuff.name)
-                                .font(.system(size: 20.0))
-                                .foregroundColor(Color(red: 0.808, green: 0.172, blue: 0.333))
+                    List {
+                        ForEach(0..<viewModel.stuffs.count, id: \.self) { index in
+                            NavigationLink{
+                                OthersView(stuff: viewModel.stuffs[index])
+                            } label : {
                                 
+                                VStack{
+                                    Image(systemName: viewModel.stuffs[index].icon)
+                                        .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.946, saturation: 1.0, brightness: 1.0)/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 10, height: 30)
+                                        .fontWeight(.bold)
+                                }
+                                    
+                                    Text(viewModel.stuffs[index].name)
+                                        .font(.system(size: 20.0))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                                        .padding(.leading, 10)
                                 
+                            }
                         }
-                        //Divider x ogni stuffs
-                        Divider()
-                            .padding(.horizontal)
+                        
+                        
                         
                         
                     }
-                    //Fine parte sostituita
                     
+                    .listStyle(.plain)
+                    //Fine parte sostituita
+                    RecentlyView()
                     
                     
                     //Divisione tra Recently e ListView
-                    Spacer(minLength: 30)
+                    //
                     
                     //Metodo che richiama i Recently Added già impostati
-                    RecentlyView()
-                        .padding(.top,10.0)
+                    
+                       
+                            //.padding(.top,10.0)
+                    
                 }
+                .navigationBarTitle("Library")
                 .scrollContentBackground(.hidden)
                 .toolbar{
                     ToolbarItemGroup(placement:
                             .topBarTrailing) {
                                 EditButton()
-                                    .foregroundColor(Color(red: 0.808, green: 0.172, blue: 0.333))
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.946, saturation: 1.0, brightness: 1.0)/*@END_MENU_TOKEN@*/)
                             }
                 }
-                .navigationTitle("Library")
-                Divider()
                 
                 
                 
                 
+                
+                
+               
                 
             }
             

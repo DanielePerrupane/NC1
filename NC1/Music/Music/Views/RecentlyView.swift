@@ -15,7 +15,7 @@ struct RecentlyView: View {
         VStack{
         Text("Recently Added")
             .font(.title)
-            .fontWeight(.semibold)
+            .fontWeight(.bold)
         //Per rendere il Text visibile anche in dark mode
             .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
             .position(x:120.0)
@@ -36,12 +36,12 @@ struct RecentlyView: View {
                             
                             Rectangle()
                                 .foregroundColor(.clear)
-                                .frame(width: 180, height: 195)
+                                .frame(width: 180, height: 175)
                                 .background(
                                     Image(song.imageName)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(width: 180, height: 195)
+                                        .frame(width: 180, height: 175)
                                         .clipped()
                                     
                                 ).cornerRadius(5).shadow(radius: 5)

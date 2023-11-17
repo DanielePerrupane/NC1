@@ -12,6 +12,7 @@ struct OthersView: View {
     var stuff : Stuff
     var body: some View {
         
+        
             Image("AppIcon")
         
     }
@@ -19,6 +20,6 @@ struct OthersView: View {
 
 #Preview {
     OthersView(stuff:
-                Stuff(name: "Example")
+                Stuff(name: "Example", icon: "")
     )
 }

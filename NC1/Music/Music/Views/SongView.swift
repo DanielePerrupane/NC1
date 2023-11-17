@@ -17,15 +17,15 @@ struct SongView: View {
             
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: 180, height: 195)
+                .frame(width: 180, height: 175)
                 .background(
                     Image(song.imageName)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 180, height: 195)
+                        .frame(width: 180, height: 175)
                         .clipped()
                         
-                ).cornerRadius(5).shadow(radius: 5)
+                ).cornerRadius(10).shadow(radius: 5)
             VStack(alignment: .leading){
                 Text(song.title)
                     //.padding(.trailing, 55.0)
@@ -46,5 +46,5 @@ struct SongView: View {
 }
 
 #Preview {
-    SongView(song: Song(imageName: "Right My Wrongs", title: "Right My Wrongs", artist: "Bryson Tiller"))
+    SongView(song: Song(imageName: "Right My Wrongs", title: "T R A P S O U L", artist: "Bryson Tiller"))
 }
