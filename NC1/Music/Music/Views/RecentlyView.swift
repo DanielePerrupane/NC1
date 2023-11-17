@@ -12,13 +12,14 @@ struct RecentlyView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        
+        VStack{
         Text("Recently Added")
             .font(.title)
             .fontWeight(.semibold)
         //Per rendere il Text visibile anche in dark mode
             .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-            .position(x:118.0,y:18.0)
+            .position(x:110.0)
+            .padding(.bottom,20.0)
         
         HStack {
             
@@ -42,7 +43,7 @@ struct RecentlyView: View {
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 180, height: 195)
                                         .clipped()
-                                        
+                                    
                                 ).cornerRadius(5).shadow(radius: 5)
                             VStack{
                                 Text(song.title)
@@ -59,6 +60,7 @@ struct RecentlyView: View {
                 }
             }
         }
+    }
     }
 }
 
