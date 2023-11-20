@@ -20,27 +20,28 @@ struct RecentlyView: View {
                     .font(.system(size: 23))
                     //.padding(.bottom, 10.0)
                     //.position(x:110.0, y:25.0)
-                HStack{
-                ForEach(songModel.songs) { song in
-                    
-                    NavigationLink{
-                        SongView(song: song)
-                    } label : {
-                        VStack{
-                            
-                                SongView(song: Song(imageName: song.imageName, title: song.title, artist: song.artist))
+                VStack {
+                    ForEach(songModel.songs.indices) { index in
+                        if index % 2 == 0 {
+                            HStack(spacing:20.0) {
+                                NavigationLink(destination: SongView(song: songModel.songs[index])) {
+                                    SongView(song: songModel.songs[index])
+                                }
                                 
+                                if index + 1 < songModel.songs.count {
+                                    NavigationLink(destination: SongView(song: songModel.songs[index + 1])) {
+                                        SongView(song: songModel.songs[index + 1])
+                                    }
+                                }
                             }
-                        .padding(.horizontal,0.0)
+                            //.padding(.horizontal, 5.0)
                         }
-                    .padding(.horizontal,5.0)
-                        
                     }
                 }
             }
-            .frame(width: 393,height: 350)
+            //.frame(width: 393,height: 350)
             }
-        .padding(.top,-30.0)
+        //.padding(.top,-30.0)
             
             
         }

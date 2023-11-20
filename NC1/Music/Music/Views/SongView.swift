@@ -17,34 +17,28 @@ struct SongView: View {
             
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: 170, height: 170)
+                .frame(width: 170, height: 165)
                 .background(
                     Image(song.imageName)
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
+                        //.aspectRatio(contentMode: .fill)
                         .frame(width: 170, height: 185)
                         .clipped()
-                        
-                ).cornerRadius(8).shadow(radius: 5)
+                    
+                ).cornerRadius(10).shadow(radius: 5)
             VStack(alignment: .leading){
                 Text(song.title)
-                    //.padding(.trailing, 55.0)
+                
                     .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                    
+                
                 Text(song.artist)
                     .lineLimit(nil)
                     .foregroundStyle(.gray)
-                    
-                    //.padding(.left)
-                    //.padding(.trailing, 90.0)
             }
-//            .frame(width: 180)
-
         }
-//        .frame(width: 180)
     }
 }
 
 #Preview {
-    SongView(song: Song(imageName: "Right My Wrongs", title: "T R A P S O U L", artist: "Bryson Tiller"))
+    SongView(song: Song(imageName: "trapsoul", title: "T R A P S O U L", artist: "Bryson Tiller"))
 }
