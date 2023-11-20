@@ -42,7 +42,7 @@ struct ListView: View {
                             
                         }
                         Divider()
-                            //.padding(.leading,60.0)
+                            .padding(.leading,60.0)
                     }
                 }
             .listStyle(.plain)
