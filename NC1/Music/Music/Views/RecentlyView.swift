@@ -9,60 +9,43 @@ import SwiftUI
 
 struct RecentlyView: View {
     var songModel = SongViewModel()
+  
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        VStack{
-        Text("Recently Added")
-            .font(.title)
-            .fontWeight(.bold)
-        //Per rendere il Text visibile anche in dark mode
-            .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-            .position(x:120.0)
-            .padding(.bottom,20.0)
-        
-        HStack {
-            
-            ForEach(songModel.songs) { song in
-                
-                NavigationLink{
+        ScrollView{
+            VStack(alignment: .leading) {
+                Text("Recently Added")
+                    .fontWeight(.heavy)
+                    .font(.system(size: 23))
+                    //.padding(.bottom, 10.0)
+                    //.position(x:110.0, y:25.0)
+                HStack{
+                ForEach(songModel.songs) { song in
                     
-                    SongView(song: song)
-                    
-                } label : {
-                    
-                    HStack{
-                        VStack(alignment: .leading){
+                    NavigationLink{
+                        SongView(song: song)
+                    } label : {
+                        VStack{
                             
-                            Rectangle()
-                                .foregroundColor(.clear)
-                                .frame(width: 180, height: 175)
-                                .background(
-                                    Image(song.imageName)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 180, height: 175)
-                                        .clipped()
-                                    
-                                ).cornerRadius(5).shadow(radius: 5)
-                            VStack(alignment: .leading){
-                                Text(song.title)
-                                    .padding(.trailing, 55.0)
-                                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                                Text(song.artist)
-                                    .foregroundStyle(.gray)
-                                    .padding(.trailing, 90.0)
+                                SongView(song: Song(imageName: song.imageName, title: song.title, artist: song.artist))
+                                
                             }
-                            
+                        .padding(.horizontal,0.0)
                         }
+                    .padding(.horizontal,5.0)
+                        
                     }
-                    .frame(width: 185, height: 190)
                 }
             }
+            .frame(width: 393,height: 350)
+            }
+        .padding(.top,-30.0)
+            
+            
         }
     }
-    }
-}
+
 
 #Preview {
     RecentlyView()

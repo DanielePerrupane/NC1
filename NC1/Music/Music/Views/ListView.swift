@@ -13,38 +13,43 @@ struct ListView: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         
-        NavigationView {
-            List {
-                ForEach(0..<viewModel.stuffs.count, id: \.self) { index in
-                    NavigationLink{
-                        OthersView(stuff: viewModel.stuffs[index])
-                    } label : {
-                        
-                        VStack{
-                            Image(systemName: viewModel.stuffs[index].icon)
-                                .aspectRatio(contentMode: .fill)
-                                
-                                .frame(width: 10, height: 30)
-                                .fontWeight(.bold)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.946, saturation: 1.0, brightness: 1.0)/*@END_MENU_TOKEN@*/)
+        
+     ScrollView {
+            VStack{
+                  
+                    ForEach(0..<viewModel.stuffs.count, id: \.self) { index in
+                        NavigationLink{
+                            OthersView(stuff: viewModel.stuffs[index])
+                        } label : {
+                            HStack(alignment: .bottom, spacing: 0) {
+                                Image(systemName: viewModel.stuffs[index].icon)
+                                    .fontWeight(.bold)
+                                    .frame(width: 30, height: 22)
+                                    .foregroundColor(Color(hue: 0.946, saturation: 1.0, brightness: 1.0))
+                                Text(viewModel.stuffs[index].name)
+                                    .font(.system(size: 20.0))
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                                    .padding(.leading, 10)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(.horizontal, 19)
+                            .padding(.vertical, 0)
+                            .frame(width: 393, alignment: .topLeading)
                             
-                                
+                            
                         }
-                            
-                            Text(viewModel.stuffs[index].name)
-                                .font(.system(size: 20.0))
-                                .fontWeight(.semibold)
-                                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
-                                .padding(.leading, 10)
-                        
+                        Divider()
+                            //.padding(.leading,60.0)
                     }
                 }
-            }
-            
             .listStyle(.plain)
+            RecentlyView()
+             
         }
-        //.frame(maxWidth: .infinity, maxHeight: .infinity)
-        //.background(Color.clear)
+        
     }
 }
 

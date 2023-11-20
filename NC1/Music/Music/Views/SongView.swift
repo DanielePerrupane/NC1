@@ -17,15 +17,15 @@ struct SongView: View {
             
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: 180, height: 175)
+                .frame(width: 170, height: 170)
                 .background(
                     Image(song.imageName)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 180, height: 175)
+                        .frame(width: 170, height: 185)
                         .clipped()
                         
-                ).cornerRadius(10).shadow(radius: 5)
+                ).cornerRadius(8).shadow(radius: 5)
             VStack(alignment: .leading){
                 Text(song.title)
                     //.padding(.trailing, 55.0)

@@ -11,7 +11,8 @@ import SwiftUI
 class SongViewModel {
     var songs = [
         Song(imageName: "Right My Wrongs", title: "Right My Wrongs", artist: "Bryson Tiller"),
-        Song(imageName: "The Color Violet", title: "The Color Violet", artist: "Tory Lanez")
+        Song(imageName: "The Color Violet", title: "The Color Violet", artist: "Tory Lanez"),
+        //Song(imageName: "Under The Influence", title: "Under The Influence", artist: "Chris Brown")
     
     ]
     
