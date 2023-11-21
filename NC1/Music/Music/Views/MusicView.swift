@@ -20,7 +20,7 @@ struct MusicView: View {
                 VStack {
                     //Sostituire con ListView
                     ListView()
-                        .navigationTitle("Library")
+                        .navigationBarTitle("Library")
                         .padding(.top,13.0)
                     //Fine parte sostituita
                 }

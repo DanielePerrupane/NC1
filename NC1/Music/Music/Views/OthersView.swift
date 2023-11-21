@@ -13,7 +13,12 @@ struct OthersView: View {
     var body: some View {
         
         
-            Image("AppIcon")
+        
+            VStack {
+                        Text("Hi")
+                    }
+            .navigationBarTitle("Playlist")
+                        
         
     }
 }
