@@ -12,7 +12,7 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             
-            Text("Listen Now")
+            ListenNowView()
                 .tabItem {
                     Text("Listen Now")
                     Image(systemName: "play.circle.fill")
@@ -23,7 +23,7 @@ struct MainView: View {
                 }
                 .tag(0) // Assign a tag to each tab
             
-            Text("Browse")
+            BrowseView()
                 .tabItem {
                     Text("Browse")
                     Image(systemName: "squareshape.split.2x2")
@@ -35,7 +35,7 @@ struct MainView: View {
                 }
                 .tag(1)
             
-            Text("Radio")
+            RadioView()
                 .tabItem {
                     Text("Radio")
                     Image(systemName: "dot.radiowaves.left.and.right")
@@ -68,12 +68,7 @@ struct MainView: View {
                 }
                 .tag(3)
 
-
-
-
-
-            
-            Text("Search")
+            SearchMainView()
                 .tabItem {
                     Text("Search")
                     Image(systemName: "magnifyingglass")
