@@ -45,6 +45,7 @@ struct ListView: View {
             }
             .listStyle(.plain)
             RecentlyView()
+                .padding(.top,10.0)
         }
     }
 }
