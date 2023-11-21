@@ -17,12 +17,6 @@
 		E76AFB392B0CA7A900B15623 /* SongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76AFB382B0CA7A900B15623 /* SongsView.swift */; };
 		E76AFB3B2B0CA7B400B15623 /* GenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76AFB3A2B0CA7B400B15623 /* GenresView.swift */; };
 		E76AFB3D2B0CA7BD00B15623 /* ComposersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76AFB3C2B0CA7BD00B15623 /* ComposersView.swift */; };
-		E76AFB402B0CC10900B15623 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = E76AFB3F2B0CC10900B15623 /* SwiftUIIntrospect */; };
-		E76AFB422B0CC10900B15623 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E76AFB412B0CC10900B15623 /* SwiftUIIntrospect-Dynamic */; };
-		E76AFB442B0CC10900B15623 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = E76AFB432B0CC10900B15623 /* SwiftUIIntrospect-Static */; };
-		E76AFB462B0CC12100B15623 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = E76AFB452B0CC12100B15623 /* SwiftUIIntrospect */; };
-		E76AFB482B0CC12100B15623 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E76AFB472B0CC12100B15623 /* SwiftUIIntrospect-Dynamic */; };
-		E76AFB4A2B0CC12100B15623 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = E76AFB492B0CC12100B15623 /* SwiftUIIntrospect-Static */; };
 		E76AFB4E2B0CC52C00B15623 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76AFB4D2B0CC52C00B15623 /* MainView.swift */; };
 		E7B6F5A22B0685E900E40FF9 /* RecentlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6F5A12B0685E900E40FF9 /* RecentlyView.swift */; };
 		E7B6F5A42B0695EA00E40FF9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B6F5A32B0695EA00E40FF9 /* ListView.swift */; };
@@ -48,6 +42,7 @@
 		E76AFB4D2B0CC52C00B15623 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E7B6F5A12B0685E900E40FF9 /* RecentlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyView.swift; sourceTree = "<group>"; };
 		E7B6F5A32B0695EA00E40FF9 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E7BE06012B0CFB2200B233D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7DD163C2B037F5D00D5B6A8 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DD163F2B037F5D00D5B6A8 /* MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicApp.swift; sourceTree = "<group>"; };
 		E7DD16432B037F5F00D5B6A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,12 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76AFB402B0CC10900B15623 /* SwiftUIIntrospect in Frameworks */,
-				E76AFB422B0CC10900B15623 /* SwiftUIIntrospect-Dynamic in Frameworks */,
-				E76AFB442B0CC10900B15623 /* SwiftUIIntrospect-Static in Frameworks */,
-				E76AFB462B0CC12100B15623 /* SwiftUIIntrospect in Frameworks */,
-				E76AFB482B0CC12100B15623 /* SwiftUIIntrospect-Dynamic in Frameworks */,
-				E76AFB4A2B0CC12100B15623 /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +82,7 @@
 		E7DD163E2B037F5D00D5B6A8 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				E7BE06012B0CFB2200B233D6 /* Info.plist */,
 				E7DD16532B0382E900D5B6A8 /* Views */,
 				E7DD16502B0380A100D5B6A8 /* ViewModels */,
 				E7DD164D2B037F9F00D5B6A8 /* Model */,
@@ -165,12 +155,6 @@
 			);
 			name = Music;
 			packageProductDependencies = (
-				E76AFB3F2B0CC10900B15623 /* SwiftUIIntrospect */,
-				E76AFB412B0CC10900B15623 /* SwiftUIIntrospect-Dynamic */,
-				E76AFB432B0CC10900B15623 /* SwiftUIIntrospect-Static */,
-				E76AFB452B0CC12100B15623 /* SwiftUIIntrospect */,
-				E76AFB472B0CC12100B15623 /* SwiftUIIntrospect-Dynamic */,
-				E76AFB492B0CC12100B15623 /* SwiftUIIntrospect-Static */,
 			);
 			productName = Music;
 			productReference = E7DD163C2B037F5D00D5B6A8 /* Music.app */;
@@ -382,6 +366,7 @@
 				DEVELOPMENT_TEAM = ZFK4JX3BJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Music/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -411,6 +396,7 @@
 				DEVELOPMENT_TEAM = ZFK4JX3BJ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Music/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,39 +448,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E76AFB3F2B0CC10900B15623 /* SwiftUIIntrospect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E76AFB3E2B0CC10900B15623 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = SwiftUIIntrospect;
-		};
-		E76AFB412B0CC10900B15623 /* SwiftUIIntrospect-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E76AFB3E2B0CC10900B15623 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = "SwiftUIIntrospect-Dynamic";
-		};
-		E76AFB432B0CC10900B15623 /* SwiftUIIntrospect-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E76AFB3E2B0CC10900B15623 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = "SwiftUIIntrospect-Static";
-		};
-		E76AFB452B0CC12100B15623 /* SwiftUIIntrospect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E76AFB3E2B0CC10900B15623 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = SwiftUIIntrospect;
-		};
-		E76AFB472B0CC12100B15623 /* SwiftUIIntrospect-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E76AFB3E2B0CC10900B15623 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = "SwiftUIIntrospect-Dynamic";
-		};
-		E76AFB492B0CC12100B15623 /* SwiftUIIntrospect-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E76AFB3E2B0CC10900B15623 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = "SwiftUIIntrospect-Static";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7DD16342B037F5D00D5B6A8 /* Project object */;
 }

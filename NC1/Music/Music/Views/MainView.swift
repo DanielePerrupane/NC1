@@ -23,7 +23,7 @@ struct MainView: View {
                 }
                 .tag(0) // Assign a tag to each tab
             
-            Text("Search")
+            Text("Browse")
                 .tabItem {
                     Text("Browse")
                     Image(systemName: "squareshape.split.2x2")
@@ -35,7 +35,7 @@ struct MainView: View {
                 }
                 .tag(1)
             
-            Text("Pin")
+            Text("Radio")
                 .tabItem {
                     Text("Radio")
                     Image(systemName: "dot.radiowaves.left.and.right")
@@ -73,7 +73,7 @@ struct MainView: View {
 
 
             
-            Text("Avatar")
+            Text("Search")
                 .tabItem {
                     Text("Search")
                     Image(systemName: "magnifyingglass")
