@@ -12,9 +12,9 @@ struct SearchMainView: View {
         NavigationView {
             VStack (alignment: .leading){
                 //Sostituire con ListView
+                //SearchBar()
                 SearchView()
-                    .navigationBarTitle("Search")
-                    .padding(.top,13.0)
+                    //.padding(.top,13.0)
                 //Fine parte sostituita
             }
             
