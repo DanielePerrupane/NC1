@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecentlyView: View {
     var songModel = SongViewModel()
-  
+    
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -18,8 +18,6 @@ struct RecentlyView: View {
                 Text("Recently Added")
                     .fontWeight(.heavy)
                     .font(.system(size: 23))
-                    //.padding(.bottom, 10.0)
-                    //.position(x:110.0, y:25.0)
                 VStack {
                     ForEach(songModel.songs.indices) { index in
                         if index % 2 == 0 {
@@ -34,18 +32,18 @@ struct RecentlyView: View {
                                     }
                                 }
                             }
-                            //.padding(.horizontal, 5.0)
+                            
                         }
                     }
                 }
             }
-            //.frame(width: 393,height: 350)
-            }
-        //.padding(.top,-30.0)
-            
             
         }
+        
+        
+        
     }
+}
 
 
 #Preview {

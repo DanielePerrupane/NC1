@@ -27,15 +27,16 @@ struct CategoryView: View {
                 .shadow(radius: 5)
 
             VStack {
-                Spacer()
+                
                 Text(caterogy.name)
                     .font(.system(size: 15))
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
-                    .lineLimit(3) // Imposta il numero massimo di linee
+                // Imposta il numero massimo di linee
+                    .lineLimit(2)
                     .padding(.trailing)
-                    .offset(x:10,y:-7)
+                    .offset(x:10,y:40)
                 
             }
         }
@@ -43,5 +44,5 @@ struct CategoryView: View {
 }
 
 #Preview {
-    CategoryView(caterogy: Cat(name: "Apple Music Artist of the Year 2023", image: "Image5"))
+    CategoryView(caterogy: Cat(name: "Apple Music", image: "Image5"))
 }
